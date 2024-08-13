@@ -206,7 +206,7 @@ def birthdays(args, book):
     if not upcoming_birthdays:
         return "No upcoming birthdays found."
     else:
-        return "\n".join(f"{record.name.value}: {record.birthday.value.strftime('%d.%m.%Y')}" for record in upcoming_birthdays)
+        return "\n".join(f"{record['name']}: {record['congratulation_date']}" for record in upcoming_birthdays)
 def main():
     # Основний цикл обробки команд.
     book = AddressBook()  # Використовуємо AddressBook замість словника
